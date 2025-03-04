@@ -7,18 +7,20 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
+      className="min-h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 flex items-center"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
-          <h2 className="text-4xl sm:text-7xl font-bold text-white">
+      <div className="max-w-screen-lg mx-auto flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-12">
+        
+        {/* Left Section - Text */}
+        <div className="flex flex-col justify-center text-center md:text-left">
+          <h2 className="text-4xl sm:text-6xl font-bold text-white">
             Web Developer
           </h2>
-          <p className="text-gray-500 py-4 max-w-md">
-          I'm an enthusiastic front-end developer with a strong foundation in HTML, CSS, and JavaScript. Proficient in modern tools like Tailwind CSS, React.js, and Redux, I'm eager to create user-friendly interfaces and contribute to dynamic web projects while continuously expanding my skills and knowledge in the field.
+          <p className="text-gray-400 py-4 max-w-md text-base sm:text-lg">
+            I'm an enthusiastic front-end developer with a strong foundation in HTML, CSS, and JavaScript. Proficient in modern tools like Tailwind CSS, React.js, and Redux, I'm eager to create user-friendly interfaces and contribute to dynamic web projects.
           </p>
 
-          <div>
+          <div className="flex justify-center md:justify-start">
             <Link
               to="portfolio"
               smooth
@@ -33,13 +35,15 @@ const Home = () => {
           </div>
         </div>
 
-        <div>
+        {/* Right Section - Image */}
+        <div className="flex justify-center">
           <img
             src={HeroImage}
-            alt="my profile"
-            className="rounded-2xl mx-auto h-[330px] w-full w-2/3 md:w-full lg:h-[400px]"
+            alt="Profile"
+            className="rounded-2xl mx-auto w-2/3 sm:w-1/2 md:w-[300px] lg:w-[400px] shadow-lg"
           />
         </div>
+
       </div>
     </div>
   );
